@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ShoppingBag } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Product } from '../../types';
@@ -21,7 +21,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             <ShoppingBag className="h-5 w-5 text-gray-900" />
           </button>
         </div>
-        
+
         <div className="mt-4">
           <h3 className="text-lg font-medium">{product.name}</h3>
           <p className="text-sm text-gray-600 mt-1">{product.description}</p>

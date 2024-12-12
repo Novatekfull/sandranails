@@ -1,4 +1,4 @@
-import React from 'react';
+
 import ProductCard from '../products/ProductCard';
 import { Product } from '../../types';
 
@@ -8,25 +8,25 @@ const featuredProducts: Product[] = [
     name: "L'Or Royal",
     description: "Nail art en or 24 carats avec incrustation de diamants",
     price: 299,
-    image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&q=80",
-    category: "luxe"
+    image: "/assets/8.png",
+    category: "luxe",
   },
   {
     id: 2,
     name: "Nuit Étoilée",
     description: "Design exclusif avec poudre de nacre et cristaux Swarovski",
     price: 249,
-    image: "https://images.unsplash.com/photo-1607779097040-26e80aa4576f?auto=format&fit=crop&q=80",
-    category: "nuit"
+    image: "/assets/4.png",
+    category: "nuit",
   },
   {
     id: 3,
     name: "Rose Éternelle",
     description: "Motifs floraux délicats avec feuilles d'or rose",
     price: 199,
-    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80",
-    category: "jour"
-  }
+    image: "/assets/7.png",
+    category: "jour",
+  },
 ];
 
 export default function FeaturedProducts() {
