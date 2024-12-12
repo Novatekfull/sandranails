@@ -58,20 +58,32 @@ export default function ProductDetail() {
             <div className="border-b border-gray-200">
               <nav className="flex space-x-8">
                 <button
-                  onClick={() => setActiveTab('description')}
-                  className={`pb-4 ${activeTab === 'description' ? 'border-b-2 border-amber-500 text-amber-500' : 'text-gray-500'}`}
+                  onClick={() => setActiveTab("description")}
+                  className={`pb-4 ${
+                    activeTab === "description"
+                      ? "border-b-2 border-amber-500 text-amber-500"
+                      : "text-gray-500"
+                  }`}
                 >
                   Description
                 </button>
                 <button
-                  onClick={() => setActiveTab('livraison')}
-                  className={`pb-4 ${activeTab === 'livraison' ? 'border-b-2 border-amber-500 text-amber-500' : 'text-gray-500'}`}
+                  onClick={() => setActiveTab("livraison")}
+                  className={`pb-4 ${
+                    activeTab === "livraison"
+                      ? "border-b-2 border-amber-500 text-amber-500"
+                      : "text-gray-500"
+                  }`}
                 >
                   Livraison
                 </button>
                 <button
-                  onClick={() => setActiveTab('avis')}
-                  className={`pb-4 ${activeTab === 'avis' ? 'border-b-2 border-amber-500 text-amber-500' : 'text-gray-500'}`}
+                  onClick={() => setActiveTab("avis")}
+                  className={`pb-4 ${
+                    activeTab === "avis"
+                      ? "border-b-2 border-amber-500 text-amber-500"
+                      : "text-gray-500"
+                  }`}
                 >
                   Avis Clients
                 </button>
@@ -80,7 +92,7 @@ export default function ProductDetail() {
 
             {/* Tab Content */}
             <div className="space-y-4">
-              {activeTab === 'description' && (
+              {activeTab === "description" && (
                 <>
                   <p className="text-gray-600">{product.description}</p>
                   <div className="border-t pt-4">
@@ -94,26 +106,30 @@ export default function ProductDetail() {
                 </>
               )}
 
-              {activeTab === 'livraison' && (
+              {activeTab === "livraison" && (
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <Truck className="h-6 w-6 text-amber-500 flex-shrink-0" />
                     <div>
                       <h3 className="font-medium">Livraison Express</h3>
-                      <p className="text-gray-600">Livraison sous 24-48h en France métropolitaine</p>
+                      <p className="text-gray-600">
+                        Livraison sous 24-48h en France métropolitaine
+                      </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Shield className="h-6 w-6 text-amber-500 flex-shrink-0" />
                     <div>
                       <h3 className="font-medium">Garantie Qualité</h3>
-                      <p className="text-gray-600">Garantie satisfaction 30 jours</p>
+                      <p className="text-gray-600">
+                        Garantie satisfaction 30 jours
+                      </p>
                     </div>
                   </div>
                 </div>
               )}
 
-              {activeTab === 'avis' && (
+              {activeTab === "avis" && (
                 <div className="space-y-6">
                   {reviews.map((review) => (
                     <div key={review.id} className="border-b pb-4">
@@ -122,11 +138,16 @@ export default function ProductDetail() {
                           <span className="font-medium">{review.author}</span>
                           <div className="flex">
                             {[...Array(review.rating)].map((_, i) => (
-                              <Star key={i} className="h-4 w-4 text-amber-500 fill-current" />
+                              <Star
+                                key={i}
+                                className="h-4 w-4 text-amber-500 fill-current"
+                              />
                             ))}
                           </div>
                         </div>
-                        <span className="text-sm text-gray-500">{review.date}</span>
+                        <span className="text-sm text-gray-500">
+                          {review.date}
+                        </span>
                       </div>
                       <p className="text-gray-600">{review.comment}</p>
                     </div>
@@ -148,10 +169,26 @@ export default function ProductDetail() {
             <div className="border-t pt-6">
               <h3 className="font-medium mb-4">Moyens de Paiement Acceptés</h3>
               <div className="grid grid-cols-4 gap-4">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa" className="h-8 object-contain" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard" className="h-8 object-contain" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png" alt="PayPal" className="h-8 object-contain" />
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Apple_Pay_logo.svg/1280px-Apple_Pay_logo.svg.png" alt="Apple Pay" className="h-8 object-contain" />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png"
+                  alt="Visa"
+                  className="h-8 object-contain"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png"
+                  alt="Mastercard"
+                  className="h-8 object-contain"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png"
+                  alt="PayPal"
+                  className="h-8 object-contain"
+                />
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Apple_Pay_logo.svg/512px-Apple_Pay_logo.svg.png"
+                  alt="Apple Pay"
+                  className="h-8 object-contain"
+                />
               </div>
             </div>
           </div>
